@@ -16,14 +16,13 @@ BEGIN {
 #$| = 1;
 
 use 5.006_001;
-require Exporter;
 
 use constant IS_PRE_520_PERL => $] < 5.020;
 
+use Exporter qw(import);
 use Carp ();
 
 BEGIN {
-    @ISA = qw(Exporter);
     @EXPORT = qw(Dumper);
     @EXPORT_OK = qw(DumperX);
 

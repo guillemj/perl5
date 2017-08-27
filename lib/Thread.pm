@@ -17,8 +17,8 @@ BEGIN {
 use threads 'yield';
 use threads::shared;
 
-require Exporter;
-our @ISA = qw(Exporter threads);
+use Exporter qw(import);
+our @ISA = qw(threads);
 our @EXPORT = qw(cond_wait cond_broadcast cond_signal);
 our @EXPORT_OK = qw(async yield);
 

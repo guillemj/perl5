@@ -1,6 +1,6 @@
 package Search::Dict;
 require 5.000;
-require Exporter;
+use Exporter qw(import);
 
 my $fc_available;
 BEGIN {
@@ -14,7 +14,6 @@ BEGIN {
 use strict;
 
 our $VERSION = '1.07';
-our @ISA = qw(Exporter);
 our @EXPORT = qw(look);
 
 =head1 NAME

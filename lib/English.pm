@@ -2,8 +2,7 @@ package English;
 
 our $VERSION = '1.10';
 
-require Exporter;
-@ISA = qw(Exporter);
+use Exporter qw(import);
 
 =head1 NAME
 

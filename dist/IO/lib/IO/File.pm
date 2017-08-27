@@ -131,10 +131,9 @@ use Carp;
 use Symbol;
 use SelectSaver;
 use IO::Seekable;
+use Exporter qw(import);
 
-require Exporter;
-
-@ISA = qw(IO::Handle IO::Seekable Exporter);
+@ISA = qw(IO::Handle IO::Seekable);
 
 $VERSION = "1.16";
 

@@ -9,10 +9,9 @@ package IO::Poll;
 
 use strict;
 use IO::Handle;
-use Exporter ();
-our(@ISA, @EXPORT_OK, @EXPORT, $VERSION);
+use Exporter qw(import);
+our(@EXPORT_OK, @EXPORT, $VERSION);
 
-@ISA = qw(Exporter);
 $VERSION = "0.10";
 
 @EXPORT = qw( POLLIN

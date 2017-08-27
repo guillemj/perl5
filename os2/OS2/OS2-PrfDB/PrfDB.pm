@@ -2,12 +2,12 @@ package OS2::PrfDB;
 
 use strict;
 
-require Exporter;
+use Exporter qw(import);
 use XSLoader;
 use Tie::Hash;
 
 our $debug;
-our @ISA = qw(Exporter Tie::Hash);
+our @ISA = qw(Tie::Hash);
 # Items to export into callers namespace by default. Note: do not export
 # names by default without a very good reason. Use EXPORT_OK instead.
 # Do not simply export all your public functions/methods/constants.

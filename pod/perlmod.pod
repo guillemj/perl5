@@ -447,14 +447,12 @@ create a file called F<Some/Module.pm> and start with this template:
     use strict;
     use warnings;
 
+    use Exporter qw(import);
+
     BEGIN {
-        require Exporter;
 
         # set the version for version checking
         our $VERSION     = 1.00;
-
-        # Inherit from Exporter to export functions and variables
-        our @ISA         = qw(Exporter);
 
         # Functions and variables which are exported by default
         our @EXPORT      = qw(func1 func2);

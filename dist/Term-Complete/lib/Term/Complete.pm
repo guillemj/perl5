@@ -1,9 +1,8 @@
 package Term::Complete;
 require 5.000;
-require Exporter;
-
 use strict;
-our @ISA = qw(Exporter);
+use Exporter qw(import);
+
 our @EXPORT = qw(Complete);
 our $VERSION = '1.403';
 

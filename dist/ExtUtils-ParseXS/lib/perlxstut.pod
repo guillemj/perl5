@@ -133,9 +133,8 @@ The file Mytest.pm should start with something like this:
     use strict;
     use warnings;
 
-    require Exporter;
+    use Exporter qw(import);
 
-    our @ISA = qw(Exporter);
     our %EXPORT_TAGS = ( 'all' => [ qw(
 
     ) ] );

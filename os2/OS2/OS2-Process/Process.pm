@@ -14,12 +14,12 @@ sub DESTROY {
 
 package OS2::Process;
 
+use Exporter qw(import);
+
 BEGIN {
-  require Exporter;
   require XSLoader;
   #require AutoLoader;
 
-  our @ISA = qw(Exporter);
   our $VERSION = "1.12";
   XSLoader::load('OS2::Process', $VERSION);
 }

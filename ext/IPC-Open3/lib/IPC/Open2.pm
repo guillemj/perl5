@@ -4,10 +4,9 @@ use strict;
 our ($VERSION, @ISA, @EXPORT);
 
 require 5.000;
-require Exporter;
+use Exporter qw(import);
 
 $VERSION	= 1.04;
-@ISA		= qw(Exporter);
 @EXPORT		= qw(open2);
 
 =head1 NAME

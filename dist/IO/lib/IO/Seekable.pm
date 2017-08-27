@@ -97,15 +97,14 @@ Derived from FileHandle.pm by Graham Barr E<lt>gbarr@pobox.comE<gt>
 use 5.006_001;
 use Carp;
 use strict;
-our($VERSION, @EXPORT, @ISA);
+our($VERSION, @EXPORT);
 use IO::Handle ();
 # XXX we can't get these from IO::Handle or we'll get prototype
 # mismatch warnings on C<use POSIX; use IO::File;> :-(
 use Fcntl qw(SEEK_SET SEEK_CUR SEEK_END);
-require Exporter;
+use Exporter qw(import);
 
 @EXPORT = qw(SEEK_SET SEEK_CUR SEEK_END);
-@ISA = qw(Exporter);
 
 $VERSION = "1.10";
 $VERSION = eval $VERSION;

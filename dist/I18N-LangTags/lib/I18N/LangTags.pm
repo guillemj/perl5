@@ -5,9 +5,9 @@
 require 5.000;
 package I18N::LangTags;
 use strict;
-use vars qw(@ISA @EXPORT @EXPORT_OK %EXPORT_TAGS $VERSION %Panic);
-require Exporter;
-@ISA = qw(Exporter);
+use vars qw(@EXPORT @EXPORT_OK %EXPORT_TAGS $VERSION %Panic);
+use Exporter qw(import);
+
 @EXPORT = qw();
 @EXPORT_OK = qw(is_language_tag same_language_tag
                 extract_language_tags super_languages

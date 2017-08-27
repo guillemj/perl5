@@ -4,10 +4,9 @@ use strict;
 use warnings;
 use warnings::register;
 our $VERSION = '1.34';
-require Exporter;
+use Exporter qw(import);
 require Cwd;
 
-our @ISA = qw(Exporter);
 our @EXPORT = qw(find finddepth);
 
 

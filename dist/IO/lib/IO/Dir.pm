@@ -11,14 +11,14 @@ use 5.006;
 use strict;
 use Carp;
 use Symbol;
-use Exporter;
+use Exporter qw(import);
 use IO::File;
 our(@ISA, $VERSION, @EXPORT_OK);
 use Tie::Hash;
 use File::stat;
 use File::Spec;
 
-@ISA = qw(Tie::Hash Exporter);
+@ISA = qw(Tie::Hash);
 $VERSION = "1.10";
 $VERSION = eval $VERSION;
 @EXPORT_OK = qw(DIR_UNLINK);

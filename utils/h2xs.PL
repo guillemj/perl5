@@ -1120,7 +1120,7 @@ END
 
 print PM <<'END' unless $skip_exporter;
 
-require Exporter;
+use Exporter qw(import);
 END
 
 my $use_Dyna = (not $opt_X and $compat_version < 5.006 and not $use_xsloader);
@@ -1149,7 +1149,6 @@ if ( $compat_version < 5.006 ) {
 
 # Determine @ISA.
 my @modISA;
-push @modISA, 'Exporter'	unless $skip_exporter;
 push @modISA, 'DynaLoader' 	if $use_Dyna;  # no XS
 my $myISA = "our \@ISA = qw(@modISA);";
 $myISA =~ s/^our // if $compat_version < 5.006;

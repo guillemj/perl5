@@ -4,16 +4,15 @@ use 5.006_001;
 
 use strict;
 
-our($VERSION, @ISA, @EXPORT_OK);
+our($VERSION, @EXPORT_OK);
 
 $VERSION = "1.40";
 
 use Carp;
-use Exporter ();
+use Exporter qw(import);
 use XSLoader;
 
 BEGIN {
-    @ISA = qw(Exporter);
     @EXPORT_OK = qw(
 	opset ops_to_opset
 	opset_to_ops opset_to_hex invert_opset

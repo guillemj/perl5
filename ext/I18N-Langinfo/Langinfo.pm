@@ -4,11 +4,9 @@ use 5.006;
 use strict;
 use warnings;
 use Carp;
+use Exporter qw(import);
 
-require Exporter;
 require XSLoader;
-
-our @ISA = qw(Exporter);
 
 our @EXPORT = qw(langinfo);
 

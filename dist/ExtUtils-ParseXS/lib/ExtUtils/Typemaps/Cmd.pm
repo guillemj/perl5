@@ -5,10 +5,8 @@ use warnings;
 our $VERSION = '3.35';
 
 use ExtUtils::Typemaps;
+use Exporter qw(import);
 
-require Exporter;
-
-our @ISA = qw(Exporter);
 our @EXPORT = qw(embeddable_typemap);
 our %EXPORT_TAGS = (all => \@EXPORT);
 

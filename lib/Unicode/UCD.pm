@@ -4,12 +4,9 @@ use strict;
 use warnings;
 no warnings 'surrogate';    # surrogates can be inputs to this
 use charnames ();
+use Exporter qw(import);
 
 our $VERSION = '0.68';
-
-require Exporter;
-
-our @ISA = qw(Exporter);
 
 our @EXPORT_OK = qw(charinfo
 		    charblock charscript

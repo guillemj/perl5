@@ -7,8 +7,9 @@
 #
 
 require XSLoader;
-require Exporter;
-package Storable; @ISA = qw(Exporter);
+package Storable;
+
+use Exporter qw(import);
 
 @EXPORT = qw(store retrieve);
 @EXPORT_OK = qw(

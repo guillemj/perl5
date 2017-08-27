@@ -130,9 +130,8 @@ while (<>) {
         print PM <<"END";
 package $newpack;
 use 5.006;
-require Exporter;
+use Exporter qw(import);
 $carp
-\@ISA = qw(Exporter);
 \@EXPORT = qw(@export);
 $export_ok
 $_

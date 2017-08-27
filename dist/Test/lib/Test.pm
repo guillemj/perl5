@@ -5,7 +5,8 @@ package Test;
 use strict;
 
 use Carp;
-use vars (qw($VERSION @ISA @EXPORT @EXPORT_OK $ntest $TestLevel), #public-ish
+use Exporter qw(import);
+use vars (qw($VERSION @EXPORT @EXPORT_OK $ntest $TestLevel), #public-ish
           qw($TESTOUT $TESTERR %Program_Lines $told_about_diff
              $ONFAIL %todo %history $planned @FAILDETAIL) #private-ish
          );
@@ -21,8 +22,6 @@ sub _reset_globals {
 }
 
 $VERSION = '1.30';
-require Exporter;
-@ISA=('Exporter');
 
 @EXPORT    = qw(&plan &ok &skip);
 @EXPORT_OK = qw($ntest $TESTOUT $TESTERR);

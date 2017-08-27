@@ -80,8 +80,8 @@ you reload the C<Foo> module afterwards.
 
 BEGIN { require 5.005; }
 
-require Exporter;
-@ISA = qw(Exporter);
+use Exporter qw(import);
+
 @EXPORT = qw(gensym ungensym qualify qualify_to_ref);
 @EXPORT_OK = qw(delete_package geniosym);
 

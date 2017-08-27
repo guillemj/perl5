@@ -1,12 +1,11 @@
 #!./perl -w
 package ExtUtils::Miniperl;
 use strict;
-require Exporter;
+use Exporter qw(import);
 use ExtUtils::Embed 1.31, qw(xsi_header xsi_protos xsi_body);
 
-use vars qw($VERSION @ISA @EXPORT);
+use vars qw($VERSION @EXPORT);
 
-@ISA = qw(Exporter);
 @EXPORT = qw(writemain);
 $VERSION = '1.06';
 

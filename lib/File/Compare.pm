@@ -3,12 +3,11 @@ package File::Compare;
 use 5.006;
 use strict;
 use warnings;
-our($VERSION, @ISA, @EXPORT, @EXPORT_OK, $Too_Big);
+our($VERSION, @EXPORT, @EXPORT_OK, $Too_Big);
 
-require Exporter;
+use Exporter qw(import);
 
 $VERSION = '1.1006';
-@ISA = qw(Exporter);
 @EXPORT = qw(compare);
 @EXPORT_OK = qw(cmp compare_text);
 

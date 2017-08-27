@@ -5,10 +5,10 @@ use strict;
 use warnings;
 use Scalar::Util qw( reftype);
 
+use Exporter qw(import);
+
 our $VERSION = '1.19';
 
-require Exporter;
-our @ISA = qw(Exporter);
 our %EXPORT_TAGS = (
     'all' => [ qw(
         fieldhash

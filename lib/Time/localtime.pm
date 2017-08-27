@@ -2,12 +2,12 @@ package Time::localtime;
 use strict;
 use 5.006_001;
 
+use Exporter qw(import);
 use Time::tm;
 
 our(@ISA, @EXPORT, @EXPORT_OK, %EXPORT_TAGS, $VERSION);
 BEGIN {
-    use Exporter   ();
-    @ISA         = qw(Exporter Time::tm);
+    @ISA         = qw(Time::tm);
     @EXPORT      = qw(localtime ctime);
     @EXPORT_OK   = qw(  
 			$tm_sec $tm_min $tm_hour $tm_mday 

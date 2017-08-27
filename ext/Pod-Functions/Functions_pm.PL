@@ -209,9 +209,8 @@ L<perlfunc/"Perl Functions by Category"> section.
 
 our $VERSION = '1.11';
 
-require Exporter;
+use Exporter qw(import);
 
-our @ISA = qw(Exporter);
 our @EXPORT = qw(%Kinds %Type %Flavor %Type_Description @Type_Order);
 
 our(%Kinds, %Type, %Flavor, %Type_Description, @Type_Order);

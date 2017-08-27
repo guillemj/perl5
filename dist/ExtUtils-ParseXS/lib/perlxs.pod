@@ -144,9 +144,9 @@ more detail later in this document.
 
      package RPC;
 
-     require Exporter;
+     use Exporter qw(import);
      require DynaLoader;
-     @ISA = qw(Exporter DynaLoader);
+     @ISA = qw(DynaLoader);
      @EXPORT = qw( rpcb_gettime );
 
      bootstrap RPC;
@@ -2104,9 +2104,9 @@ File C<RPC.pm>: Perl module for the RPC extension.
 
      package RPC;
 
-     require Exporter;
+     use Exporter qw(import);
      require DynaLoader;
-     @ISA = qw(Exporter DynaLoader);
+     @ISA = qw(DynaLoader);
      @EXPORT = qw(rpcb_gettime getnetconfigent);
 
      bootstrap RPC;

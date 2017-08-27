@@ -1,10 +1,9 @@
 package OS2::REXX;
 
-require Exporter;
+use Exporter qw(import);
 use XSLoader;
 require OS2::DLL;
 
-@ISA = qw(Exporter);
 # Items to export into callers namespace by default
 # (move infrequently used names to @EXPORT_OK below)
 @EXPORT = qw(REXX_call REXX_eval REXX_eval_with);

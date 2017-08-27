@@ -5,10 +5,8 @@ use strict;
 use warnings;
 use Carp;
 
-require Exporter;
+use Exporter qw(import);
 #use AutoLoader;
-
-our @ISA = qw(Exporter);
 
 # Items to export into callers namespace by default. Note: do not export
 # names by default without a very good reason. Use EXPORT_OK instead.

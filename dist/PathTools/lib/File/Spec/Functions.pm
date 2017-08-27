@@ -3,14 +3,12 @@ package File::Spec::Functions;
 use File::Spec;
 use strict;
 
-use vars qw(@ISA @EXPORT @EXPORT_OK %EXPORT_TAGS $VERSION);
+use vars qw(@EXPORT @EXPORT_OK %EXPORT_TAGS $VERSION);
 
 $VERSION = '3.68';
 $VERSION =~ tr/_//d;
 
-require Exporter;
-
-@ISA = qw(Exporter);
+use Exporter qw(import);
 
 @EXPORT = qw(
 	canonpath

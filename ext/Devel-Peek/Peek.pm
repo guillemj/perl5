@@ -10,7 +10,6 @@ $VERSION = eval $VERSION;
 require Exporter;
 require XSLoader;
 
-@ISA = qw(Exporter);
 @EXPORT = qw(Dump mstat DeadCode DumpArray DumpWithOP DumpProg
 	     fill_mstats mstats_fillhash mstats2hash runops_debug debug_flags);
 @EXPORT_OK = qw(SvREFCNT CvGV);

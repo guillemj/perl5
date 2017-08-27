@@ -228,9 +228,8 @@ our $VERSION = '1.12';
 # If you want to use this package on a non-VMS system,
 # uncomment the following line.
 # use AutoLoader;
-require Exporter;
+use Exporter qw(import);
 
-@ISA = qw( Exporter );
 @EXPORT = qw( &vmsify &unixify &pathify &fileify
               &vmspath &unixpath &candelete &rmsexpand );
 @EXPORT_OK = qw( &unixrealpath &vmsrealpath &case_tolerant_process );

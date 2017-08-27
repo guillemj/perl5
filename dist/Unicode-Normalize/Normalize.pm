@@ -13,6 +13,7 @@ use 5.006;
 use strict;
 use warnings;
 use Carp;
+use Exporter qw(import);
 
 no warnings 'utf8';
 
@@ -52,11 +53,9 @@ sub unpack_U {
     return unpack('U*', shift(@_).pack('U*'));
 }
 
-require Exporter;
-
 ##### The above part is common to XS and PP #####
 
-our @ISA = qw(Exporter DynaLoader);
+our @ISA = qw(DynaLoader);
 require DynaLoader;
 bootstrap Unicode::Normalize $VERSION;
 

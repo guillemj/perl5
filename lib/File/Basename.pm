@@ -50,9 +50,9 @@ BEGIN {
 use strict;
 use 5.006;
 use warnings;
-our(@ISA, @EXPORT, $VERSION, $Fileparse_fstype, $Fileparse_igncase);
-require Exporter;
-@ISA = qw(Exporter);
+use Exporter qw(import);
+our(@EXPORT, $VERSION, $Fileparse_fstype, $Fileparse_igncase);
+
 @EXPORT = qw(fileparse fileparse_set_fstype basename dirname);
 $VERSION = "2.85";
 

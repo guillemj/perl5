@@ -113,9 +113,8 @@ European character set.
 use POSIX qw(strxfrm LC_COLLATE);
 use warnings::register;
 
-require Exporter;
+use Exporter qw(import);
 
-our @ISA = qw(Exporter);
 our @EXPORT = qw(collate_xfrm setlocale LC_COLLATE);
 our @EXPORT_OK = qw();
 

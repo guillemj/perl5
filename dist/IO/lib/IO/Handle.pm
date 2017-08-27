@@ -262,14 +262,12 @@ Derived from FileHandle.pm by Graham Barr E<lt>F<gbarr@pobox.com>E<gt>
 
 use 5.006_001;
 use strict;
-our($VERSION, @EXPORT_OK, @ISA);
+our($VERSION, @EXPORT_OK);
 use Carp;
 use Symbol;
 use SelectSaver;
 use IO ();	# Load the XS module
-
-require Exporter;
-@ISA = qw(Exporter);
+use Exporter qw(import);
 
 $VERSION = "1.36";
 $VERSION = eval $VERSION;

@@ -1,9 +1,9 @@
 package ExtUtils::Embed;
-require Exporter;
+use Exporter qw(import);
 use Config;
 require File::Spec;
 
-use vars qw(@ISA @EXPORT $VERSION
+use vars qw(@EXPORT $VERSION
 	    @Extensions $Verbose $lib_ext
 	    $opt_o $opt_s 
 	    );
@@ -12,7 +12,6 @@ use strict;
 # This is not a dual-life module, so no need for development version numbers
 $VERSION = '1.34';
 
-@ISA = qw(Exporter);
 @EXPORT = qw(&xsinit &ldopts 
 	     &ccopts &ccflags &ccdlflags &perl_inc
 	     &xsi_header &xsi_protos &xsi_body);

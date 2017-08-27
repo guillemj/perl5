@@ -79,14 +79,13 @@ under the same terms as Perl itself.
 package FindBin;
 use Carp;
 require 5.000;
-require Exporter;
+use Exporter qw(import);
 use Cwd qw(getcwd cwd abs_path);
 use File::Basename;
 use File::Spec;
 
 @EXPORT_OK = qw($Bin $Script $RealBin $RealScript $Dir $RealDir);
 %EXPORT_TAGS = (ALL => [qw($Bin $Script $RealBin $RealScript $Dir $RealDir)]);
-@ISA = qw(Exporter);
 
 $VERSION = "1.51";
 

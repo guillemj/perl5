@@ -9,8 +9,8 @@ use warnings::register;
 our(@ISA, @EXPORT, $VERSION);
 
 use Carp;
-
 require Exporter;
+
 @ISA = qw(Exporter);
 @EXPORT = qw(struct);
 

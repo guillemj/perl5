@@ -15,8 +15,7 @@ use 5.008;
 require "Maintainers.pl";
 use vars qw(%Modules %Maintainers);
 
-use vars qw(@ISA @EXPORT_OK $VERSION);
-@ISA = qw(Exporter);
+use vars qw(@EXPORT_OK $VERSION);
 @EXPORT_OK = qw(%Modules %Maintainers
 		get_module_files get_module_pat
 		show_results process_options files_to_modules
@@ -24,7 +23,7 @@ use vars qw(@ISA @EXPORT_OK $VERSION);
 		reload_manifest);
 $VERSION = 0.12;
 
-require Exporter;
+use Exporter qw(import);
 
 use File::Find;
 use Getopt::Long;

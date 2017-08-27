@@ -1831,8 +1831,7 @@ example that quite brazenly replaces the C<glob> operator with something
 that understands regular expressions.
 
     package REGlob;
-    require Exporter;
-    @ISA = 'Exporter';
+    use Exporter qw(export);
     @EXPORT_OK = 'glob';
 
     sub import {

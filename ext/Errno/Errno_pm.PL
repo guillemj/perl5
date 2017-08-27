@@ -285,8 +285,8 @@ sub write_errno_pm {
 #
 
 package Errno;
-require Exporter;
 use strict;
+use Exporter qw(import);
 
 EDQ
 
@@ -306,7 +306,6 @@ CONFIG_CHECK_END
     print <<"EDQ";
 our \$VERSION = "$VERSION";
 \$VERSION = eval \$VERSION;
-our \@ISA = 'Exporter';
 
 my %err;
 

@@ -8,8 +8,7 @@
 package B;
 use strict;
 
-require Exporter;
-@B::ISA = qw(Exporter);
+use Exporter qw(import);
 
 # walkoptree_slow comes from B.pm (you are there),
 # walkoptree comes from B.xs

@@ -2,8 +2,8 @@ package Testing;
 use 5.006_001;
 use strict;
 use warnings;
-require Exporter;
-our @ISA = qw(Exporter);
+use Exporter qw(import);
+
 our @EXPORT_OK = qw(
     create_file_ok
     mkdir_ok

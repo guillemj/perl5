@@ -1,6 +1,6 @@
 package Text::Abbrev;
 require 5.005;		# Probably works on earlier versions too.
-require Exporter;
+use Exporter qw(import);
 
 our $VERSION = '1.02';
 
@@ -32,7 +32,6 @@ The values are the original list elements.
 
 =cut
 
-@ISA = qw(Exporter);
 @EXPORT = qw(abbrev);
 
 # Usage:

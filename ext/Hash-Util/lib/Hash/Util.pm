@@ -9,7 +9,7 @@ use warnings::register;
 use Scalar::Util qw(reftype);
 
 require Exporter;
-our @ISA        = qw(Exporter);
+
 our @EXPORT_OK  = qw(
                      fieldhash fieldhashes
 

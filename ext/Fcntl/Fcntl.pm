@@ -56,11 +56,11 @@ See L<perlfunc/stat> about the S_I* constants.
 =cut
 
 use strict;
-our($VERSION, @ISA, @EXPORT, @EXPORT_OK, %EXPORT_TAGS);
+our($VERSION, @EXPORT, @EXPORT_OK, %EXPORT_TAGS);
 
-require Exporter;
+use Exporter qw(import);
 require XSLoader;
-@ISA = qw(Exporter);
+
 $VERSION = '1.13';
 
 XSLoader::load();

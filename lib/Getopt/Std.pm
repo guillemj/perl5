@@ -1,6 +1,6 @@
 package Getopt::Std;
 require 5.000;
-require Exporter;
+use Exporter qw(import);
 
 =head1 NAME
 
@@ -79,7 +79,6 @@ and version_mess() with the switches string as an argument.
 
 =cut
 
-@ISA = qw(Exporter);
 @EXPORT = qw(getopt getopts);
 $VERSION = '1.12';
 # uncomment the next line to disable 1.03-backward compatibility paranoia

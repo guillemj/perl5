@@ -4,10 +4,10 @@ BEGIN {
     use strict;
     use vars qw|$VERSION $XS_VERSION @ISA @EXPORT @EXPORT_OK|;
 
-    require Exporter;
+    use Exporter qw(import);
     require DynaLoader;
 
-    @ISA = qw|Exporter DynaLoader|;
+    @ISA = qw|DynaLoader|;
     $VERSION = '0.35';
     $XS_VERSION = $VERSION;
     $VERSION = eval $VERSION;

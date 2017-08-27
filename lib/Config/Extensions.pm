@@ -1,11 +1,10 @@
 package Config::Extensions;
 use strict;
-use vars qw(%Extensions $VERSION @ISA @EXPORT_OK);
+use vars qw(%Extensions $VERSION @EXPORT_OK);
 use Config;
-require Exporter;
+use Exporter qw(import);
 
 $VERSION = '0.01';
-@ISA = 'Exporter';
 @EXPORT_OK = '%Extensions';
 
 foreach my $type (qw(static dynamic nonxs)) {

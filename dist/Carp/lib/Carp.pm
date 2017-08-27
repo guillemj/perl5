@@ -126,8 +126,8 @@ our $MaxArgLen  = 64;    # How much of each argument to print. 0 = all.
 our $MaxArgNums = 8;     # How many arguments to print. 0 = all.
 our $RefArgFormatter = undef; # allow caller to format reference arguments
 
-require Exporter;
-our @ISA       = ('Exporter');
+use Exporter qw(import);
+
 our @EXPORT    = qw(confess croak carp);
 our @EXPORT_OK = qw(cluck verbose longmess shortmess);
 our @EXPORT_FAIL = qw(verbose);    # hook to enable verbose mode

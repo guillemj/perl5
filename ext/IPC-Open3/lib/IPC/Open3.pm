@@ -2,15 +2,14 @@ package IPC::Open3;
 
 use strict;
 no strict 'refs'; # because users pass me bareword filehandles
-our ($VERSION, @ISA, @EXPORT);
+our ($VERSION, @EXPORT);
 
-require Exporter;
+use Exporter qw(import);
 
 use Carp;
 use Symbol qw(gensym qualify);
 
 $VERSION	= '1.20';
-@ISA		= qw(Exporter);
 @EXPORT		= qw(open3);
 
 =head1 NAME

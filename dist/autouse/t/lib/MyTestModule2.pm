@@ -1,8 +1,7 @@
 package MyTestModule2;
 use warnings;
 
-@ISA = Exporter;
-require Exporter;
+use Exporter qw(import);
 @EXPORT_OK = 'test_function2';
 
 sub test_function2 {

@@ -10,8 +10,10 @@ package File::Copy;
 use 5.006;
 use strict;
 use warnings; no warnings 'newline';
+use Exporter qw(import);
 use File::Spec;
 use Config;
+
 # During perl build, we need File::Copy but Scalar::Util might not be built yet
 # And then we need these games to avoid loading overload, as that will
 # confuse miniperl during the bootstrap of perl.
@@ -24,8 +26,6 @@ sub mv;
 
 $VERSION = '2.32';
 
-require Exporter;
-@ISA = qw(Exporter);
 @EXPORT = qw(copy move);
 @EXPORT_OK = qw(cp mv);
 
