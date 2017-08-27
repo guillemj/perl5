@@ -3,21 +3,19 @@ use Exporter qw(import);
 use Config;
 require File::Spec;
 
-use vars qw(@EXPORT $VERSION
-	    @Extensions $Verbose $lib_ext
-	    $opt_o $opt_s 
-	    );
 use strict;
 
 # This is not a dual-life module, so no need for development version numbers
-$VERSION = '1.34';
+our $VERSION = '1.34';
 
-@EXPORT = qw(&xsinit &ldopts 
-	     &ccopts &ccflags &ccdlflags &perl_inc
-	     &xsi_header &xsi_protos &xsi_body);
+our @EXPORT = qw(&xsinit &ldopts
+                 &ccopts &ccflags &ccdlflags &perl_inc
+                 &xsi_header &xsi_protos &xsi_body);
 
-$Verbose = 0;
-$lib_ext = $Config{lib_ext} || '.a';
+our @Extensions;
+our $Verbose = 0;
+our $lib_ext = $Config{lib_ext} || '.a';
+our ($opt_o, $opt_s);
 
 sub is_cmd { $0 eq '-e' }
 
@@ -275,6 +273,8 @@ sub canon {
     }
     @ext;
 }
+
+1;
 
 __END__
 

@@ -1,10 +1,12 @@
 #!/usr/bin/perl -w
 
 use strict;
-use vars qw(%Build %Targets $Verbose $Test);
+
 use Text::Tabs;
 use Text::Wrap;
 use Getopt::Long;
+
+our (%Build, %Targets, $Verbose, $Test);
 
 if (ord("A") == 193) {
     print "1..0 # EBCDIC sort order is different\n";

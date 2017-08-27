@@ -21,15 +21,14 @@ BEGIN {
                         $pw_expire  $pw_change  $pw_class
                         $pw_age
                         $pw_quota   $pw_comment
-                        $pw_expire
-
                    );
     %EXPORT_TAGS = (
         FIELDS => [ grep(/^\$pw_/, @EXPORT_OK), @EXPORT ],
         ALL    => [ @EXPORT, @EXPORT_OK ],
     );
 }
-use vars grep /^\$pw_/, @EXPORT_OK;
+our ($pw_name, $pw_passwd, $pw_uid, $pw_gid, $pw_gecos, $pw_dir, $pw_shell,
+     $pw_expire, $pw_change, $pw_class, $pw_age, $pw_quota, $pw_comment);
 
 #
 # XXX: these mean somebody hacked this module's source

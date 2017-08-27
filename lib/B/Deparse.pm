@@ -50,11 +50,12 @@ use B qw(class main_root main_start main_cv svref_2object opnumber perlstring
         MDEREF_SHIFT
     );
 
-$VERSION = '1.42';
 use strict;
-use vars qw/$AUTOLOAD/;
 use warnings ();
 require feature;
+
+our $VERSION = '1.42';
+our $AUTOLOAD;
 
 BEGIN {
     # List version-specific constants here.

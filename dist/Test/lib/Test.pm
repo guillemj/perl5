@@ -6,10 +6,10 @@ use strict;
 
 use Carp;
 use Exporter qw(import);
-use vars (qw($VERSION @EXPORT @EXPORT_OK $ntest $TestLevel), #public-ish
-          qw($TESTOUT $TESTERR %Program_Lines $told_about_diff
-             $ONFAIL %todo %history $planned @FAILDETAIL) #private-ish
-         );
+
+our ($ntest, $TestLevel); #public-ish
+our ($TESTOUT, $TESTERR, %Program_Lines, $told_about_diff,
+     $ONFAIL, %todo, %history, $planned, @FAILDETAIL); #private-ish
 
 # In case a test is run in a persistent environment.
 sub _reset_globals {
@@ -21,10 +21,11 @@ sub _reset_globals {
     $planned    = 0;
 }
 
-$VERSION = '1.30';
 
-@EXPORT    = qw(&plan &ok &skip);
-@EXPORT_OK = qw($ntest $TESTOUT $TESTERR);
+our $VERSION = '1.30';
+
+our @EXPORT    = qw(&plan &ok &skip);
+our @EXPORT_OK = qw($ntest $TESTOUT $TESTERR);
 
 $|=1;
 $TESTOUT = *STDOUT{IO};

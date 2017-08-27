@@ -17,7 +17,10 @@ BEGIN {
     %EXPORT_TAGS = ( FIELDS => [ @EXPORT_OK, @EXPORT ] );
     $VERSION     = 1.02;
 }
-use vars      @EXPORT_OK;
+
+our ($tm_sec, $tm_min, $tm_hour, $tm_mday,
+     $tm_mon, $tm_year, $tm_wday, $tm_yday,
+     $tm_isdst);
 
 sub populate (@) {
     return unless @_;

@@ -1,5 +1,5 @@
 package ExtUtils::CBuilder::Platform::Windows;
-$ExtUtils::CBuilder::Platform::Windows::VERSION = '0.280228';
+
 use strict;
 use warnings;
 
@@ -9,8 +9,8 @@ use File::Spec;
 use ExtUtils::CBuilder::Base;
 use IO::File;
 
-use vars qw(@ISA);
-@ISA = qw(ExtUtils::CBuilder::Base);
+our $VERSION = '0.280228';
+our @ISA = qw(ExtUtils::CBuilder::Base);
 
 =begin comment
 

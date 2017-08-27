@@ -3,9 +3,9 @@ package Tie::StdHandle;
 use strict;
 
 use Tie::Handle;
-use vars qw(@ISA $VERSION);
-@ISA = 'Tie::Handle';
-$VERSION = '4.4';
+
+our @ISA = 'Tie::Handle';
+our $VERSION = '4.4';
 
 =head1 NAME
 

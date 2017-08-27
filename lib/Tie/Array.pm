@@ -83,8 +83,8 @@ sub DELETE {
 }
 
 package Tie::StdArray;
-use vars qw(@ISA);
-@ISA = 'Tie::Array';
+
+our @ISA = 'Tie::Array';
 
 sub TIEARRAY  { bless [], $_[0] }
 sub FETCHSIZE { scalar @{$_[0]} }

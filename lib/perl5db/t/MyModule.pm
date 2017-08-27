@@ -3,7 +3,7 @@ package MyModule;
 use strict;
 use warnings;
 
-use vars qw($var);
+our $var;
 
 $var = "Bar";
 

@@ -2,7 +2,6 @@ package OptreeCheck;
 use parent 'Exporter';
 use strict;
 use warnings;
-use vars qw($TODO $Level $using_open);
 require "test.pl";
 
 our $VERSION = '0.15';
@@ -11,6 +10,8 @@ our $VERSION = '0.15';
 our @EXPORT = qw( checkOptree plan skip skip_all pass is like unlike
 		  require_ok runperl tempfile);
 
+
+our ($TODO, $Level, $using_open);
 
 # The hints flags will differ if ${^OPEN} is set.
 # The approach taken is to put the hints-with-open in the golden results, and

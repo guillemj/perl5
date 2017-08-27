@@ -4,10 +4,8 @@ use strict;
 use Exporter qw(import);
 use ExtUtils::Embed 1.31, qw(xsi_header xsi_protos xsi_body);
 
-use vars qw($VERSION @EXPORT);
-
-@EXPORT = qw(writemain);
-$VERSION = '1.06';
+our @EXPORT = qw(writemain);
+our $VERSION = '1.06';
 
 # blead will run this with miniperl, hence we can't use autodie or File::Temp
 my $temp;

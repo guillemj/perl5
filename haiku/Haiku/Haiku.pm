@@ -2,19 +2,18 @@ package Haiku;
 
 BEGIN {
     use strict;
-    use vars qw|$VERSION $XS_VERSION @ISA @EXPORT @EXPORT_OK|;
 
     use Exporter qw(import);
     require DynaLoader;
 
-    @ISA = qw|DynaLoader|;
-    $VERSION = '0.35';
-    $XS_VERSION = $VERSION;
+    our @ISA = qw|DynaLoader|;
+    our $VERSION = '0.35';
+    our $XS_VERSION = $VERSION;
     $VERSION = eval $VERSION;
 
-    @EXPORT = qw(
+    our @EXPORT = qw(
     );
-    @EXPORT_OK = qw(
+    our @EXPORT_OK = qw(
     );
 }
 

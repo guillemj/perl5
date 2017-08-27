@@ -9,7 +9,7 @@ plan(skip_all => "skipped for VMS") if $^O eq 'VMS';
 plan(tests => 12);
 
 use Env  qw(@FOO);
-use vars qw(@BAR);
+our @BAR;
 
 sub array_equal
 {

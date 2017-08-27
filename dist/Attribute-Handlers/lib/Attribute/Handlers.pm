@@ -3,8 +3,9 @@ use 5.006;
 use Carp;
 use warnings;
 use strict;
-use vars qw($VERSION $AUTOLOAD);
-$VERSION = '1.00'; # remember to update version in POD!
+
+our $VERSION = '1.00'; # remember to update version in POD!
+our $AUTOLOAD;
 # $DB::single=1;
 
 my %symcache;

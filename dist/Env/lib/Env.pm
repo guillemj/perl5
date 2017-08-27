@@ -81,13 +81,14 @@ sub import {
 
     @vars = map { m/^[\$\@]/ ? $_ : '$'.$_ } @vars;
 
-    eval "package $callpack; use vars qw(" . join(' ', @vars) . ")";
-    die $@ if $@;
     foreach (@vars) {
 	my ($type, $name) = m/^([\$\@])(.*)$/;
+	my $sym = $name =~ /::/ ? $name : "${callpack}::$name";
 	if ($type eq '$') {
+	    *$sym = \$$name;
 	    tie ${"${callpack}::$name"}, Env, $name;
 	} else {
+	    *$sym = \@$name;
 	    if ($^O eq 'VMS') {
 		tie @{"${callpack}::$name"}, Env::Array::VMS, $name;
 	    } else {

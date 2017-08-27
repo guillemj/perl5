@@ -11,8 +11,8 @@ package Storable;
 
 use Exporter qw(import);
 
-@EXPORT = qw(store retrieve);
-@EXPORT_OK = qw(
+our @EXPORT = qw(store retrieve);
+our @EXPORT_OK = qw(
 	nstore store_fd nstore_fd fd_retrieve
 	freeze nfreeze thaw
 	dclone
@@ -21,9 +21,9 @@ use Exporter qw(import);
         file_magic read_magic
 );
 
-use vars qw($canonical $forgive_me $VERSION);
+our $VERSION = '2.64';
 
-$VERSION = '2.64';
+our ($canonical, $forgive_me);
 
 BEGIN {
     if (eval {

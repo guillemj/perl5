@@ -54,8 +54,9 @@ sub import {
     }
 }
 
-use vars '$WARNINGS_ON_BOOTSTRAP';
-use vars map "\$${_}_called_PP", qw(BEGIN UNITCHECK CHECK INIT END);
+our $WARNINGS_ON_BOOTSTRAP;
+our ($BEGIN_called_PP, $UNITCHECK_called_PP, $CHECK_called_PP,
+     $INIT_called_PP, $END_called_PP);
 
 BEGIN {
     # This is arguably a hack, but it disposes of the UNITCHECK block without

@@ -1,11 +1,13 @@
 package Config::Extensions;
 use strict;
-use vars qw(%Extensions $VERSION @EXPORT_OK);
+
 use Config;
 use Exporter qw(import);
 
-$VERSION = '0.01';
-@EXPORT_OK = '%Extensions';
+our $VERSION = '0.01';
+our @EXPORT_OK = '%Extensions';
+
+our %Extensions;
 
 foreach my $type (qw(static dynamic nonxs)) {
     foreach (split /\s+/, $Config{$type . '_ext'}) {

@@ -13,15 +13,14 @@ use lib "Porting";
 use 5.008;
 
 require "Maintainers.pl";
-use vars qw(%Modules %Maintainers);
+our (%Modules, %Maintainers);
 
-use vars qw(@EXPORT_OK $VERSION);
-@EXPORT_OK = qw(%Modules %Maintainers
+our @EXPORT_OK = qw(%Modules %Maintainers
 		get_module_files get_module_pat
 		show_results process_options files_to_modules
 		finish_tap_output
 		reload_manifest);
-$VERSION = 0.12;
+our $VERSION = 0.12;
 
 use Exporter qw(import);
 
